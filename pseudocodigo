@@ -1,0 +1,39 @@
+escribirLetra();
+mirarSiLaLetraEstaEnLaPalabra();
+	siEstaLaLetra()
+
+
+dada una palabra, wordGiven
+el jugador ve cuantas letras tiene. showNumberOfLetters();
+
+el jugador escoge una letra. chooseLetter();
+
+	si acierta la letra que ha escogido, es que está en la palabra, checkLetterInWord();
+		las letras acertadas se muestran. showLetter();
+		Se le pregunta de nuevo. chooseLetter();
+
+	si no acierta la letra no está en la palabra. checkLetterInWord();
+		se muestra una parte del ahoracado. showHangmanPart();
+		Se le pregunta de nuevo. chooseLetter();
+
+el juego termina playEnds();
+	cuando el jugador acierta la palabra entera. userHits();
+	o se ha pintado todo el ahorcado. userNoHits();
+
+
+
+
+las letras acertadas se muestran. showLetter();
+	
+	en una palabra nueva vacía. inEmptyWord
+	en el la misma posición (índice) que están en wordGiven
+	la letra que coincide la pongo en esa posición y 
+	se añaden a la lista de letras adivinadas
+	
+
+
+
+
+
+	se añade a la lista de letras adivinadas. addToGuessedLetters();
+	se muestran en la pantalla. drawGuessedLettersIn();
