@@ -6,9 +6,9 @@ mirarSiLaLetraEstaEnLaPalabra();
 dada una palabra, wordGiven
 el jugador ve cuantas letras tiene. showNumberOfLetters();
 
-el jugador escoge una letra. chooseLetter();
+el jugador escribe una letra. chooseLetter();
 
-	si acierta la letra que ha escogido, es que está en la palabra, checkLetterInWord();
+	si acierta la letra que ha escogido, es que está en la palabra, isInWordOrNot()
 		las letras acertadas se muestran. showLetter();
 		Se le pregunta de nuevo. chooseLetter();
 
@@ -25,7 +25,7 @@ el juego termina playEnds();
 
 las letras acertadas se muestran. showLetter();
 	
-	en una palabra nueva vacía. inEmptyWord
+	en una palabra nueva vacía de la misma longitud que la original. inEmptyWord
 	en el la misma posición (índice) que están en wordGiven
 	la letra que coincide la pongo en esa posición y 
 	se añaden a la lista de letras adivinadas

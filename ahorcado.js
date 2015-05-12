@@ -1,5 +1,7 @@
 "use strict";
 var wordGiven = "palabra";
+var userChooseLetter = "";
+var wordToComplete = "";
 
 function showNumberOfLetters(word){
 	var noOfLetters = word.length;
@@ -11,24 +13,27 @@ function chooseLetter() {
 	return userChooseLetter;
 }
 
-function checkLetterInWord(wordGiven, letter){
-	if(wordGiven.indexOf(letter) !== -1) {
+function isInWordOrNot(wordGiven, userChooseLetter){
+	if(wordGiven.indexOf(userChooseLetter) !== -1) {
 		return true;
 	}
 	return false;
-}
+}		
 
 
 
 function showLetter(userChooseLetter){
 	var guessedLetters = "";
 	for(var index = 0 ; index < wordGiven.length ; index ++){
-		console.log(wordGiven[index]);
-		if(userChooseLetter === wordGiven[index]){
-			guessedLetters += userChooseLetter;
+		var letterGiven = wordGiven[index];
+		if(userChooseLetter === letterGiven){
+
+			guessedLetters = guessedLetters + letterGiven;
+
 		}
 		else {
-			guessedLetters += " _"
+
+			guessedLetters = guessedLetters + "_"
 		}
 
 
@@ -38,15 +43,14 @@ function showLetter(userChooseLetter){
 			añado un _ a inEmptyWord*/
 	}
 	return	guessedLetters;
-
 }
 
 
 showNumberOfLetters(wordGiven);
+console.log(userChooseLetter);
 var chosenLetter = chooseLetter();
-console.log(checkLetterInWord(wordGiven, chosenLetter));
-
-console.log(showLetter());
+console.log(isInWordOrNot(wordGiven, chosenLetter));
+console.log(showLetter(chosenLetter));
 
 
 
